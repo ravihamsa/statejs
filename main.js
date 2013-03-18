@@ -9,7 +9,7 @@
 require(['app'],function(app){
     "use strict";
 
-    var tmp  = app.request({url:'data/one.json', dataType:'json', contentType:'json'});
+    var tmp  = app.request({url:'data/one.json', contentType:'json'},{url:'data/two.json', contentType:'json'});
     tmp.done(function(data){
         console.log(data);
     });
